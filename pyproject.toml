@@ -1,0 +1,16 @@
+[project]
+name = "bellmagic"
+version = "0.1.0"
+description = "Reproduction of Bell magic (Haug & Kim, arXiv:2204.10061)"
+requires-python = ">=3.10"
+dependencies = ["numpy", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+qiskit = ["qiskit", "qiskit-aer"]
+
+[tool.setuptools.packages.find]
+include = ["bellmagic*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
